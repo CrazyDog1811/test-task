@@ -1,9 +1,114 @@
+:root {
+    --text-color: rgb(73, 62, 62);
+    --hover-color: rgb(184, 38, 38);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    
+header {
+    border-bottom: 2px solid var(--text-color);
+}
+
+.container {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 10px 0;
+}
+
+h1 {
+    padding: 5px 10px;
+    text-transform: uppercase;
+    border: 2px solid var(--text-color);
+}
+
+h1>a {
+   text-decoration: none;
+   color: var(--text-color); 
+}
+
+h1>a:hover {
+    color: var(--hover-color);
+}
+
+.header-nav {
+    list-style: none;
+    display: flex;
+}
+
+.header-nav>li {
+    margin-right: 20px;
+    position: relative;
+}
+
+.header-nav>li>a {
+    font-size: 22px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--text-color);
+    transition: 0.5s;
+}
+
+.header-nav>li>a::after {
+    position: absolute;
+    content: '';
+    left:50%;
+    right: 50%;
+    bottom: -7px;
+    height: 3px;
+    background-color: var(--hover-color);
+    transition: 0.5s;
+}
+
+.header-nav>li>a::before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    right: 50%;
+    bottom: -7px;
+    height: 3px;
+    background-color: var(--hover-color);
+    transition: 0.5s;
+}
+
+.header-nav>li>a:hover {
+    color: var(--hover-color);
+}
+
+.header-nav>li>a:hover::after {
+    right: 0;
+}
+
+.header-nav>li>a:hover::before {
+    left: 0;
+}
+
+.buy .form {
+    border: 2px solid var(--text-color);
+    padding: 20px 30px;
+}
+
+.form>input[type=text],
+.form>input[type=tel]{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.form>input[type=submit] {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.form>input::placeholder{
+    padding: 10px;
+    color: rgba(73, 62, 62, 0.5);
 }
