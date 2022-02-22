@@ -9,8 +9,50 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow: hidden;
+}
+
+h2 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+}
+button {
+    color: #fff;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
 header {
     border-bottom: 2px solid var(--text-color);
+}
+
+.form-interface {
+    display: none;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.form-interface>.form2 {
+    border: 2px solid var(--text-color);
+    padding: 20px 30px;
+    background-color: #fff;
+}
+
+.form2 .cancel{
+    display: block;
+   background-color: red;
+   padding: 5px 10px;
+   margin: auto;
 }
 
 .container {
@@ -89,26 +131,104 @@ h1>a:hover {
     left: 0;
 }
 
+.slider {
+    position: relative;
+    display: flex;
+    transition: 1s;
+    left: 0;
+}
+
+.slider.right {
+    left: -100%;
+    transition: 1s;
+}
+
+.slide-1,
+.slide-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 95%;
+    min-height: 300px;
+}
+
+.slide-2 {
+    left: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.wrapper p {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.wrapper>button {
+display: block;
+margin: 50px auto;
+padding: 10px 30px;
+background-color: green;
+border-radius: 20px;
+}
+
+.buy  {
+    min-height: 400px;
+}
+
 .buy .form {
     border: 2px solid var(--text-color);
     padding: 20px 30px;
+    margin-top: 20px;
 }
 
-.form>input[type=text],
-.form>input[type=tel]{
+form>input[type=text],
+form>input[type=tel]{
     display: block;
     width: 100%;
     margin-bottom: 20px;
     padding: 5px;
 }
 
-.form>input[type=submit] {
+form>input[type=submit] {
     display: block;
     margin: 20px auto;
     padding: 10px;
+    background-color: rgb(78, 146, 202);
+    color: #fff;
 }
 
-.form>input::placeholder{
+form>input[type=submit]:hover {
+    cursor: pointer;
+}
+
+form>input::placeholder{
     padding: 10px;
     color: rgba(73, 62, 62, 0.5);
+}
+
+.switcher {
+    display: inline-block;
+    margin: 400px 0  0 50%;
+}
+
+.scroll {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.scroll.checked {
+    background-color: rgba(73, 62, 62, 0.5);
+}
+
+.scroll:hover {
+    cursor: pointer;
 }

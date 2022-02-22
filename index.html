@@ -25,27 +25,49 @@
         </div>
     </header>
     <main>
+        <div class="form-interface">
+            <form method="post" action="mailto:h@marketing1.su" enctype="text/plain" class="form2">
+                <label for="name2">Имя *</label>
+                <input type="text" id="name2" placeholder="Имя" required>
+                <label for="phone2">Телефон *</label>
+                <input type="tel" id="phone2" placeholder="+7 978 111 11 11" required>
+                <input type="checkbox" name="" id="condition2" checked>
+                <label for="condition2">Принимаю условия</label>
+                <input type="submit" class="send">
+                <button type="button" class="cancel">Отменить</button>
+            </form>
+        </div>
         <section class="buy">
-            <div class="container">
+            <div class="slider">
                 <div class="slide-1">
-                    <h2>купить электросамокат</h2>
-                    <p>Самые выгодные условия у нас</p>
-                    <form action="" class="form">
+                    <div class="wrapper">
+                        <h2>Купить электросамокат</h2>
+                        <p>Самые выгодные условия у нас</p>
+                    </div>
+                    <form method="post" action="mailto:h@marketing1.su" enctype="text/plain" class="form">
                         <label for="name">Имя *</label>
-                        <input type="text" id="name" placeholder="Имя">
+                        <input type="text" id="name" placeholder="Имя" required>
                         <label for="phone">Телефон *</label>
-                        <input type="tel" id="phone" placeholder="+7 978 111 11 11">
+                        <input type="tel" id="phone" placeholder="+7 978 111 11 11" required>
                         <input type="checkbox" name="" id="condition" checked>
                         <label for="condition">Принимаю условия</label>
                         <input type="submit">
                     </form>
                 </div>
                 <div class="slide-2">
-                    <h2>купить электросамокат</h2>
-                    <p>с доставкой по Севастополю</p>
+                    <div class="wrapper">
+                        <h2>Купить электросамокат</h2>
+                        <p>с доставкой по Севастополю</p>
+                        <button class="order">Заказать</button>
+                    </div>
                 </div>
             </div>
-           
+            <div class="switcher">
+                <span class="scroll l checked"></span>
+                <span class="scroll r"></span>
+            </div>
+            
+
         </section>
 
     </main>
