@@ -9,8 +9,8 @@
     box-sizing: border-box;
 }
 
-body {
-    overflow: hidden;
+html {
+    scroll-behavior: smooth;
 }
 
 h2 {
@@ -27,6 +27,12 @@ button:hover {
 }
 
 header {
+    border-bottom: 2px solid var(--text-color);
+}
+
+section {
+    padding-top: 30px;
+    text-align: center;
     border-bottom: 2px solid var(--text-color);
 }
 
@@ -213,7 +219,7 @@ form>input::placeholder{
 
 .switcher {
     display: inline-block;
-    margin: 400px 0  0 50%;
+    margin: 400px 0  20px 50%;
 }
 
 .scroll {
@@ -231,4 +237,54 @@ form>input::placeholder{
 
 .scroll:hover {
     cursor: pointer;
+}
+
+.advantages {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.advantage {
+    display: flex;
+    flex-basis: 40%;
+    align-items: center;
+    margin-top: 30px;
+    transition: 0.5s;
+}
+
+.advantage:hover{
+    transform: scale(1.2);
+}
+
+.advantage>span {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    background-image: url('./img/images/adv.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.advantage-content {
+    max-width: 80%;
+    padding-left: 10px;
+}
+
+.advantage-content>h3 {
+    margin-bottom: 10px;
+}
+
+.advantage-content>p {
+    margin-bottom: 30px;
+}
+
+.advantages-section>a {
+    display: inline-block;
+margin: 50px auto;
+padding: 10px 30px;
+background-color: green;
+border-radius: 20px;
+color: #fff;
+text-decoration: none;
 }
