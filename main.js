@@ -3,7 +3,11 @@ const slider = document.querySelector('.slider');
 const slides = switcher.querySelectorAll('.scroll');
 const order = document.querySelector('.order');
 const popUpForm = document.querySelector('.form-interface');
-console.log(name2.value);
+
+const burger = document.querySelector('.hamburger');
+const adaptMenu = document.querySelector('.header-nav');
+
+console.log(burger);
 
 const moveSlider = (ev) => {
    slides.forEach(el => el.classList.remove('checked'));
@@ -37,8 +41,21 @@ const removePopUp = (ev) => {
    }
 }
 
+const closeMenu = (ev) => {
+   if (ev.target.classList.contains('nav-link')) {
+       burger.classList.remove('is-active');
+       adaptMenu.classList.remove('open');
+   }
+}
+
+const toggleBurger = () => {
+   burger.classList.toggle('is-active');
+   adaptMenu.classList.toggle('open');
+}
 
 
-switcher.addEventListener('click', moveSlider)
+switcher.addEventListener('click', moveSlider);
 order.addEventListener('click', showPopUp);
-popUpForm.addEventListener('click', removePopUp)
+popUpForm.addEventListener('click', removePopUp);
+adaptMenu.addEventListener('click', closeMenu);
+burger.addEventListener('click', toggleBurger)
